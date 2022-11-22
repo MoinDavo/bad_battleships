@@ -1,0 +1,3 @@
+﻿  bad_battleships.cpp
+C:\Users\davof\source\repos\bad_battleships\bad_battleships\bad_battleships.cpp(166): warning C4715: 'gameEnd': not all control paths return a value
+  bad_battleships.vcxproj -> C:\Users\davof\source\repos\bad_battleships\x64\Debug\bad_battleships.exe
