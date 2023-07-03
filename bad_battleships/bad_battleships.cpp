@@ -1,4 +1,3 @@
-//TODO: don't close window after the game was won
 //TODO: add some kind of multiplayer functionality? local 2P (taking turns on machine)?
 
 #include <iostream>
@@ -163,6 +162,7 @@ bool gameEnd() {
 		return true;
 	}
 
+	return false;
 }
 
 int main()
@@ -172,6 +172,7 @@ int main()
 	int userY;
 	int userLength;
 	bool userHorizontal;
+	bool GameEndVal = false;
 
 	for (int i = 0; i < FIELDSIZE; i++)
 	{
@@ -195,7 +196,7 @@ int main()
 	shoot(15, 15);
 	*/
 
-	while (true)
+	while (!GameEndVal)
 	{
 		std::cout << "next action: \n";
 		std::cout << "[1] place ship \n";
@@ -252,7 +253,7 @@ int main()
 
 		if (gameEnd())
 		{
-			return 0;
+			GameEndVal = true;
 		}
 	}
 }
